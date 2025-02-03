@@ -6,11 +6,13 @@ body {
     background-color: #cbf7ff;
     text-align: center;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
 .container {
     position: relative;
     width: 100%;
+    height: 100vh;
 }
 
 h1 {
@@ -40,6 +42,7 @@ button {
     background-color: #667fff;
     color: white;
     transition: 0.3s;
+    position: relative;
 }
 
 button:hover {
