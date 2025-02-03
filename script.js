@@ -1,6 +1,40 @@
 document.getElementById("yes-button").addEventListener("click", function() {
-    document.querySelector(".button-container").style.display = "none";
+    document.getElementById("big-text").textContent = " ";
+    document.querySelector(".button-container").classList.add("hidden");
     document.getElementById("yes-content").classList.remove("hidden");
+
+    const music = document.getElementById("background-music");
+    music.volume = 0.5;
+    music.play();
+    
+    const maxHearts = 100;
+    const heartContainer = document.getElementById("heart-container");
+
+    function spawnHeart() {
+        if (heartContainer.children.length >= maxHearts) {
+            let firstHeart = heartContainer.children[0];
+            firstHeart.style.opacity = "0"; // Fade out
+            setTimeout(() => {
+                firstHeart.style.left = Math.random() * 100 + "vw";
+                firstHeart.style.top = "100vh";
+                firstHeart.style.animationDuration = (Math.random() * 4 + 2) + "s";
+                firstHeart.style.opacity = "1"; // Fade back in smoothly
+                heartContainer.appendChild(firstHeart);
+            }, 300); // Delay to avoid instant pop
+        } else {
+            let heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "100vh";
+            heart.style.animationDuration = (Math.random() * 4 + 2) + "s";
+            heartContainer.appendChild(heart);
+        }
+    
+        setTimeout(spawnHeart, 200);
+    }
+
+    spawnHeart();
 });
 
 const noButton = document.getElementById("no-button");
@@ -42,21 +76,9 @@ noButton.addEventListener("mouseover", function() {
 
 noButton.addEventListener("click", function() {
     moving = false;
-    document.getElementById("no-button-container").innerHTML = `
-        <button class="split-button" id="n-button">N</button>
-        <button class="split-button" id="o-button">O</button>
-    `;
-    document.getElementById("n-button").addEventListener("click", function() {
-        this.outerHTML = `
-            <button class="split-button">I</button>
-            <button class="split-button">\\</button>
-            <button class="split-button">I</button>
-        `;
-    });
-    document.getElementById("o-button").addEventListener("click", function() {
-        this.outerHTML = `
-            <button class="split-button">(</button>
-            <button class="split-button">)</button>
-        `;
-    });
+    document.getElementById("video-container").classList.remove("hidden");
+    const video = document.getElementById("undertale-video");
+    video.currentTime = 0;
+    video.play();
+    setTimeout(() => location.reload(), 10000);
 });

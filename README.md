@@ -1,14 +1,15 @@
 # Web Message
 
-This is a simple interactive web page that presents a message with two buttons: **Yes** and **No**. The "Yes" button leads to a hidden message, while the "No" button moves unpredictably around the screen when clicked.
+This is a fun, interactive web page with an engaging design! It presents a message with two buttons: **Yes** and **No**. The "Yes" button reveals a hidden surprise, while the "No" button moves unpredictably around the screen when hovered over, making it tricky to press.
 
 ## Features
-- **Big centered text** at the top two-thirds of the page.
-- **Two interactive buttons** underneath the text.
-  - "Yes" button **reveals an image/GIF**.
-  - "No" button **moves to different locations on click** to make it harder to press.
-- **Dynamic button movement** with a mix of vertical, horizontal, and diagonal transitions.
-- **Customizable colors and text** to fit different themes.
+- **Big, centered text** positioned in the top two-thirds of the page.
+- **Two interactive buttons** below the text:
+  - The "Yes" button **reveals an image or GIF** and plays background music.
+  - The "No" button **moves away on hover** and, if clicked, triggers a unique video response.
+- **Floating heart animations** appear when selecting "Yes."
+- **Dynamic button movement** with randomized vertical, horizontal, and diagonal transitions.
+- **Customizable colors, text, and media** to fit different themes.
 
 ## Live Demo
 You can view the live project [here](https://davide-muzzi.github.io/web-message/)
@@ -33,13 +34,13 @@ This project is hosted using **GitHub Pages**. To deploy your own version:
 
 ## Customization
 You can personalize the page by:
-- Editing the text inside `index.html` and replacing the image from `placeholder.jpg` to your own image.
-- Changing colors in `styles.css`.
-- Adjusting button behavior in `script.js`.
+- Editing the text inside `index.html` and replacing the images (`yipee-bug.gif`, `dancing.gif`) with your own media.
+- Changing colors and animations in `styles.css`.
+- Adjusting button behavior and animations in `script.js`.
+- Replacing the background music (`disco-ball.mp3`) with your own audio.
 
 ## License
 This project is free to use and modify.
 
 ---
 Feel free to reach out for any improvements or suggestions!
-
