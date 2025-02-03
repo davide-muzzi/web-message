@@ -28,7 +28,7 @@ const moveSteps = [
     { x: "-20vw", y: "30vh" }
 ];
 
-noButton.addEventListener("click", function() {
+noButton.addEventListener("mouseover", function() {
     let move = moveSteps[moveIndex];
     noButton.style.position = "absolute";
     noButton.style.transform = `translate(${move.x}, ${move.y})`;
